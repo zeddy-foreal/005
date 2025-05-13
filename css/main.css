@@ -1,0 +1,280 @@
+@font-face {
+    font-family: "myfont";
+    src: url(xD.ttf);
+}
+@font-face {
+    font-family: "logo_font";
+    src: url(logo_font.ttf);
+}
+:root{
+    --line:#f7f7f7c0;
+    --text: rgb(255, 249, 240);
+    --main:#fdaa58;
+    --xxbig_font:45px;
+    --xbig_font:30px;
+    --big_font: 21px;
+    --mid_font: 16px;
+    --small_font: 12px
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "myfont";
+    color: var(--text);
+    transition: 0.3s;
+    text-align: justify;
+    font-size: var(--mid_font);
+    text-wrap: nowrap;
+}
+body{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+button{
+    background-color: transparent;
+    cursor: pointer;
+
+}
+button:hover i{
+    color: var(--main);
+}
+.wallpaper{
+    background-image: url(wallpaper.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+    background-position: center;
+    filter: brightness(0.3);
+    z-index: -1;
+
+}
+.socials{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.socials button{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socials button i{
+    font-size: var(--big_font);
+}
+.socials hr{
+    width: 2px;
+    height: 150px;
+    background-color: var(--line);
+}
+header{
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    width: 100%;
+}
+header > *{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav button{
+    width: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+header nav button p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    text-transform: uppercase;
+}
+header nav button p:after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--line);
+    transition: 0.3s;
+}
+header nav button:hover p:after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--line);
+}
+.logo{
+    font-size: var(--xbig_font);
+    font-family: logo_font;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 800;
+}
+.logo:hover{
+    letter-spacing: 15px;
+    color: var(--main);
+}
+section{
+    padding: 0px 50px;
+    width: 100%;
+    height: 70%;
+    display: flex
+;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+section h6{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+section h6 p{
+    font-size: var(--xxbig_font);
+    text-transform: uppercase;
+    letter-spacing: 9px;
+}
+section h1{
+    font-size: var(--mid_font);
+}
+.buttons{
+    display: flex;
+    gap: 30px;
+}
+.buttons button{
+    padding: 15px 50px;
+    border-radius: 50px;
+    border: 2px solid var(--line);
+}
+.buttons button:hover{
+    background-color: var(--main);
+}
+@media (max-width:900px) {
+        :root{
+        --xxbig_font: 41px;
+        --xbig_font: 27px;
+        --big_font: 21px;
+        --mid_font: 15px;
+        --small_font: 12px;
+        }
+        .socials{
+            flex-direction: row;
+        }
+        .socials hr{
+            width: 150px;
+            height: 2px;
+        }
+}
+@media (max-width:785px){
+    :root{
+        --xxbig_font: 39px;
+        --xbig_font: 25px;
+        --big_font: 21px;
+        --mid_font: 13px;
+        --small_font: 12px;
+    }
+    header{
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px 0px;
+    }
+    header nav{
+        justify-content: space-evenly;
+    }
+}
+@media (max-width:730px){
+    :root{
+        --xxbig_font: 30px;
+        --xbig_font: 36px;
+        --big_font: 21px;
+        --mid_font: 13px;
+        --small_font: 12px;
+    }
+}
+@media (max-width:600px){
+    :root{
+        --xxbig_font: 26px;
+        --xbig_font: 36px;
+        --big_font: 19px;
+        --mid_font: 12px;
+        --small_font: 12px;
+    }
+}
+@media (max-width:545px){
+    :root{
+        --xxbig_font: 19px;
+        --xbig_font: 36px;
+        --big_font: 19px;
+        --mid_font: 12px;
+        --small_font: 12px;
+    }
+    .buttons button{
+        padding:12px 36px;
+    }
+}
+@media (max-width:440px){
+    :root{
+        --xxbig_font: 19px;
+        --xbig_font: 36px;
+        --big_font: 19px;
+        --mid_font: 12px;
+        --small_font: 12px;
+    }
+    .buttons button{
+        padding: 8px 23px;
+    }
+    section h6 p{
+        letter-spacing: 6px;
+    }
+}
+@media (max-width:440px){
+    :root{
+        --xxbig_font: 19px;
+        --xbig_font: 36px;
+        --big_font: 19px;
+        --mid_font: 12px;
+        --small_font: 12px;
+    }
+
+}
+@media (max-width:380px){
+    :root{
+        --xxbig_font: 16px;
+        --xbig_font: 33px;
+        --big_font: 18px;
+        --mid_font: 11px;
+        --small_font: 12px;
+    }
+.logo:hover{
+    letter-spacing: 10px;
+
+}
+
+}
