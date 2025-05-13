@@ -147,6 +147,7 @@ section{
     gap: 30px;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 section h6{
     display: flex;
@@ -266,10 +267,10 @@ section h1{
 }
 @media (max-width:380px){
     :root{
-        --xxbig_font: 16px;
-        --xbig_font: 33px;
-        --big_font: 18px;
-        --mid_font: 11px;
+        --xxbig_font: 13px;
+        --xbig_font: 30px;
+        --big_font: 16px;
+        --mid_font: 9px;
         --small_font: 12px;
     }
 .logo:hover{
