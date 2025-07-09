@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "myfont";
+    src: url(Font.ttf);
+}
+*{
+    box-sizing: border-box;
+    font-family: "myfont";
+}
+button{
+    cursor: pointer;
+}
+
+body, #ani_container *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+#ani_container{
+    position: fixed;
+    height: 100svh;
+    width: 100%;
+    background-color: #1f1d1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    animation-name: intro_2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 1.4s;
+}
+#ani_pic{
+    min-height: 30svh;
+    aspect-ratio: 1;
+    background-image: url(../ST_brand/logo.png);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 30px 55px 2px #ffc557 ;
+    border: 2px solid #ffc557;
+}
+.ani_loading{
+    width: 80%;
+    display: flex
+;
+    justify-content: center;
+    gap: 0.2rem;
+    align-items: center;
+}
+#ani_l{
+    width: 13svw;
+    height: 7px;
+    border: 2px solid #ffc557;
+    box-shadow: 0 0 4px #ffc557 inset;
+    display: flex
+;
+    transform: skewx(45deg);
+
+}
+#ani_l span{
+    width: 100%;
+    height: 100%;
+    background-color: #ffc557;
+    box-shadow: 0 0 100px 15px #ffc557;
+    animation-name: intro_1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+@keyframes intro_1{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+li:nth-child(2) span{
+    animation-delay: 0.3s;
+}
+li:nth-child(3) span{
+    animation-delay:0.7s;
+}
+li:nth-child(4) span{
+    animation-delay: 1s;
+}
+li:nth-child(5) span{
+    animation-delay: 1.3s;
+}
+@keyframes intro_2{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}

@@ -1,0 +1,219 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "myfont";
+    background-color: transparent;
+    color: var(--main);
+    transition: 0.4s;
+    font-size: var(--mid);
+    text-decoration: none;
+    font-weight: 800;
+}
+:root{
+    --body: #0e1221;
+    --background: #0f182a;
+    --hover: #305756;
+    --main: #6abbd9;
+    --text: #00ffba;
+    --big: 25px;
+    --mid: 13px;
+    --small: 10px;
+    --width: 450px;
+    --height:450px;
+} 
+
+::placeholder{
+    color: var(--main);
+    opacity: 0.5;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body);
+    flex-direction: column;
+    gap: 50px;
+}
+.title{
+    display: flex;
+    
+    width: var(--width);
+    justify-content: space-between;
+    align-items: center;
+}
+.title .logo{
+    font-size: var(--big);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.title button{
+    font-size: var(--big);
+}
+.title button i{
+    font-size: smaller;
+    
+}
+.title button:hover i{
+    color: var(--text);
+}
+.wallpaper{
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+}
+.wallpaper .dark{
+    width: 100%;
+    height: 100%;
+    background-image: url(dark.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+}
+.wallpaper .light{
+    width: 100%;
+    height: 100%;
+    background-image: url(light.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+.container{
+    width: var(--width);
+    height: var(--height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.container header, .container .body{
+    background-color: var(--background);
+    width: 100%;
+    display: grid;
+    border: 2px solid var(--hover);
+    border-radius: 6px;
+}
+.container header{
+    height: 10%;
+    grid-template-columns: 80% 20%;
+    justify-content: space-between;
+}
+.container header input{
+    padding: 0px 25px;
+}
+.container header button:hover{
+    background-color: var(--hover);
+    color: var(--text);
+}
+.container .body{
+    grid-template-rows: 90% 10%;
+    height: 80%;
+    
+}
+.container footer{
+    display: grid;
+    grid-template-columns: 25% 40% 25%;
+    font-size: var(--small);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.container footer button{
+    font-size: var(--small);
+}
+.container footer .numberoftasks{
+    font-size: var(--small);
+}
+.container footer .clicked{
+color: var(--text);
+}
+.container footer div{
+    display: flex;
+    justify-content: space-around;
+}
+.container .body .missions{
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+.container .body .missions .task{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--hover);
+    flex-shrink: 0;
+}
+.container .body .missions .task:hover{
+    background-color: var(--body);
+}
+.container .body .missions .task .task_details{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+}
+.container .body .missions  .box{
+    aspect-ratio: 1;
+    border: 2px solid var(--hover);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.container .body .missions .active{
+    order: 1;
+}
+.container .body .missions  .active .box{
+    background-color: var(--hover);
+
+}
+.container .body .missions span i{
+    font-size: smaller;
+    opacity: 0;
+}
+.container .body .missions .active .box i{
+    opacity: 1;
+}
+.details{
+    text-wrap: nowrap;
+    overflow: hidden;
+    width: 85%;
+    text-overflow: ellipsis;
+}
+.container .body .missions .active .box  ~ .details{
+    text-decoration: line-through;
+}
+
+@media (max-width:500px) {
+    :root{
+        --big: 23px;
+        --mid: 10px;
+        --small: 7px;
+        --width: 350px;
+
+    }
+}
+@media (max-width:370px) {
+    :root{
+        --big: 23px;
+        --mid: 10px;
+        --small: 7px;
+        --width: 300px;
+
+    }
+}

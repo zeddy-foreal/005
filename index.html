@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-Do List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="static/ST_brand/icon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="static/Animation_&_font/index.css">
+    <link rel="stylesheet" href="Font_Awesome/all.min.css">
+    <link rel="stylesheet" href="Font_Awesome/fontawesome.min.css">
+</head>
+<body>
+        <section id="ani_container" style="z-index: 5;">
+        <header id="ani_pic"></header>
+
+        <div class="ani_loading">
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+        </div>
+    </section>
+    <div class="title">
+        <a href="#" class="logo">Zeddy.Forreal</a>
+        <button class="mode"><i class="fa-solid fa-sun"></i></button>
+    </div>
+    <div class="container">
+        <header>
+            <input type="text" class="input" placeholder="create new task..">
+            <button class="add">Add</button>
+        </header>
+        <div class="body">
+            <div class="missions">
+                        
+            </div>
+            <footer>
+                <p class="numberoftasks">0 Tasks</p>
+                <div class="buttons">
+                    <button class="but all clicked">All</button>
+                    <button class="but active">Active</button>
+                    <button class="but completed">Completed</button>
+                </div>
+                <button class="removeall">Clear Completed</button>
+            </footer>
+        </div>
+        
+    </div>
+<script src="javascript/main.js"></script>
+</body>
+</html>
